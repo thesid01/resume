@@ -1,0 +1,175 @@
+%-------------------------
+% Resume in Latex
+% Author : Siddharth Kumar Verma
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Siddharth Kumar Verma}} & Email : \href{mailto:sidkv.skv@gmail.com}{sidkv.skv@gmail.com}\\
+	& Mobile : +91-800-903-9189 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology}{Jabalpur, India}
+      {Bachelor of Technology in Computer Science;  CPI: 8.7}{Aug. 2017 -- present}
+    \resumeSubheading
+      {Lucknow Public School}{Lucknow, India}
+      {Senior Secondary;  93%}{April. 2014 -- May. 2016}
+	\resumeSubheading
+      {Lucknow Public School}{Lucknow, India}
+      {Higher Secondary; CGPA: 9.2/10}{April. 2012 -- May. 2014}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {IBM}{Bangalore, India}
+      {Internship}{May 2019 - July 2019}
+      \resumeItemListStart
+        \resumeItem{Consistent and vendor agnostic Orchestration Automation}
+          {Worked on Kubernetes, OpenWhisk, Airflow, NetBox, to create a  Consistent and Agnostic Orchestration Platform to manage all Orchestrator Platform available such as vRA, CAM, ICP.}
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Skills}
+  \resumeSubHeadingListStart
+  \item{
+    \textbf{Languages}{: C/C++, Javascript, Python, Java, SQL}
+    \hfill
+    \textbf{Technologies}{: NodeJs, ReactJs, MongoDB}
+	\hfill
+	\textbf{Interests}{: Mathematics, Problem Solving}
+  }
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{QuantSoftware Toolkit}
+      {Open source python library for financial data analysis and machine learning for finance.}
+    \resumeSubItem{Github Visualization}
+      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+    \resumeSubItem{Recommendation System}
+      {Music and Movie recommender systems using collaborative filtering on public datasets.}
+    \resumeSubItem{Mac Setup}
+      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+  \resumeSubHeadingListEnd
+
+\section{Achievements}
+  \resumeSubheading
+      \resumeItemListStart
+        \resumeItem{Qualified for ACM ICPC India regionals Kolkata onsite}{Link}
+		\resumeItem{Secured 2nd rank in Hackathon conducted by IBM}{Link}
+		\resumeItem{Qualified for Smart India Hackathon (coducted by MHRD) Finale two times}{Link}
+		\resumeItem{4 star Competitive coder on CodeChef with 1803 highest rating}{Link}
+      \resumeItemListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
