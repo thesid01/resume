@@ -46,7 +46,33 @@
 % Custom commands
 \newcommand{\resumeItem}[2]{
   \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
+    \textbf{#1}{: #2 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeItemList}[1]{
+  \vspace{-2pt}\item\small{
+    { #1}
+  }
+}
+
+\newcommand{\resumeItemListTwo}[2]{
+  \vspace{-1pt}\item\small
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+\newcommand{\resumeItemListThree}[3]{
+  \vspace{1pt}\item\small
+    {#1}
+    \begin{tabular*}{0.92\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {\small #2} & \textit{\small #3} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeItemListBold}[1]{
+  \item\small{
+    \textbf{ #1 \vspace{-1pt}}
   }
 }
 
@@ -58,6 +84,21 @@
     \end{tabular*}\vspace{-5pt}
 }
 
+\newcommand{\resumeSubheadingThree}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingTwo}[3]{
+  \vspace{0pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1}  \\
+      \textit{\small#2} & \textit{\small #3} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
@@ -65,7 +106,9 @@
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
+\newcommand{\resumeSubItemList}[1]{\resumeItemList{#1}\vspace{-4pt}}
+\newcommand{\resumeSubItemListTwo}[2]{\resumeItemListTwo{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItemListBold}[1]{\resumeItemListBold{#1}\vspace{-4pt}}
 \renewcommand{\labelitemii}{$\circ$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
@@ -81,8 +124,9 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{{\Large Siddharth Kumar Verma}} & Email : \href{mailto:sidkv.skv@gmail.com}{sidkv.skv@gmail.com}\\
-	& Mobile : +91-800-903-9189 \\
+  \vspace{4pt} \textbf{{\Large Siddharth Kumar Verma}}\\
+  LinkedIn: \href{https://www.linkedin.com/in/thesid01/}{@thesid01}& Email : \href{mailto:sidkv.skv@gmail.com}{sidkv.skv@gmail.com}\\
+  GitHub: \href{https://github.com/thesid01}{@thesid01} & Mobile : +91-800-903-9189\\
 \end{tabular*}
 
 
@@ -91,13 +135,13 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Indian Institute of Information Technology}{Jabalpur, India}
-      {Bachelor of Technology in Computer Science;  CPI: 8.7}{Aug. 2017 -- present}
+      {Bachelor of Technology in Computer Science;  CPI: 8.7}{August 2017 -- present}
     \resumeSubheading
       {Lucknow Public School}{Lucknow, India}
-      {Senior Secondary;  93%}{April. 2014 -- May. 2016}
+      {Senior Secondary;  93\%}{April 2014 -- May 2016}
 	\resumeSubheading
       {Lucknow Public School}{Lucknow, India}
-      {Higher Secondary; CGPA: 9.2/10}{April. 2012 -- May. 2014}
+      {Higher Secondary; CGPA: 9.2/10}{April 2012 -- May 2014}
   \resumeSubHeadingListEnd
 
 
@@ -105,12 +149,11 @@
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading
-      {IBM}{Bangalore, India}
-      {Internship}{May 2019 - July 2019}
+    \resumeSubheadingThree
+      {{\textbf {IBM} -- \textit {Internship} }} {May 2019 - July 2019}
       \resumeItemListStart
         \resumeItem{Consistent and vendor agnostic Orchestration Automation}
-          {Worked on Kubernetes, OpenWhisk, Airflow, NetBox, to create a  Consistent and Agnostic Orchestration Platform to manage all Orchestrator Platform available such as vRA, CAM, ICP.}
+          {Worked on Kubernetes, OpenWhisk, Airflow and NetBox, to create a  Consistent and Agnostic Orchestration Platform to manage all Orchestrator Platform available such as vRA, CAM, ICP.}
       \resumeItemListEnd
       
 % --------Multiple Positions Heading------------
@@ -128,48 +171,52 @@
 %-----------EXPERIENCE-----------------
 \section{Skills}
   \resumeSubHeadingListStart
-  \item{
-    \textbf{Languages}{: C/C++, Javascript, Python, Java, SQL}
-    \hfill
-    \textbf{Technologies}{: NodeJs, ReactJs, MongoDB}
-	\hfill
-	\textbf{Interests}{: Mathematics, Problem Solving}
-  }
-
+    \resumeSubItemListBold{Languages:}{C/C++, Javascript, Python, Java, SQL}
+    \resumeSubItemListBold{Technologies:}{NodeJs, ReactJs, MongoDB, Django(Beginner)}
+	\resumeSubItemListBold{Interests:}{Mathematics, Data Structures, Algorithms}
+  \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{QuantSoftware Toolkit}
-      {Open source python library for financial data analysis and machine learning for finance.}
-    \resumeSubItem{Github Visualization}
-      {Data Visualization of Git Log data using D3 to analyze project trends over time.}
-    \resumeSubItem{Recommendation System}
-      {Music and Movie recommender systems using collaborative filtering on public datasets.}
-    \resumeSubItem{Mac Setup}
-      {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+    \resumeSubheadingTwo{Fusion - Institute ERP}
+    {Under Dr. Atul Gupta (HOD CSE Dept.)}{January 2020 - May 2020}
+      \resumeItemListStart
+        \resumeSubItemList{Collaborated and worked on Feed module, much like StackOverflow where users can ask queries and anyone can answer.}
+        \resumeItemListThree{Implemented functionalities to enhance user experience on the platform. }
+        {\textit {\textbf {Technologies: }} Django }{\href{https://github.com/thesid01/Fusion}{Link}}
+      \resumeItemListEnd
+    \resumeSubheadingThree{\textbf{Visitor Entry (Office) Management WebApp}}
+    {December 2019}
+      \resumeItemListStart
+        \resumeSubItemList{Maintains tracking of visitors visiting an office, having multiple hosts and visitors.}
+        \resumeItemListThree{Developed an API for CRUD operations.}
+        {\textit {\textbf {Technologies: }} NodeJs, ReactJs, MongoDB }{\href{https://github.com/thesid01/Summergeeks-Assignment}{Link}}
+      \resumeItemListEnd
+    \resumeSubheadingTwo{Fill Red}
+    {Under Dr. Preeti Khanna (Associate Professor in CSE Dept.)}{January 2019 - May 2019}
+      \resumeItemListStart
+        \resumeSubItemList{Developed a web portal networking blood banks, donors, and receptors.}
+        \resumeItemListThree{Eased down the complex data entry required for blood donation in the form of a digital record.}
+        {\textit {\textbf {Technologies:}} PHP }{\href{https://github.com/thesid01/Fill_Red/}{Link}}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-\section{Achievements}
-  \resumeSubheading
-      \resumeItemListStart
-        \resumeItem{Qualified for ACM ICPC India regionals Kolkata onsite}{Link}
-		\resumeItem{Secured 2nd rank in Hackathon conducted by IBM}{Link}
-		\resumeItem{Qualified for Smart India Hackathon (coducted by MHRD) Finale two times}{Link}
-		\resumeItem{4 star Competitive coder on CodeChef with 1803 highest rating}{Link}
-      \resumeItemListEnd
+%--------------ACHIEVEMENT-------------------
+\section{Achievement}
+  \resumeSubHeadingListStart
+    \resumeSubItemListTwo {Qualified for ACM ICPC India regionals Kolkata onsite. Secured 68th rank among 98 participants.}{\href{https://icpc.global/ICPCID/4FNBY1KPT7Y8}{Link}}
+    \resumeSubItemList {Secured 2nd rank in Hackathon conducted by IBM. }
+    \resumeSubItemList {Qualified for Smart India Hackathon (conducted by MHRD) Finale two times.}
+    \resumeSubItemListTwo {4 star Competitive coder on CodeChef with 1803 highest rating.}{\href{https://www.codechef.com/users/thesid01}{Link}}
+    \resumeSubItemList{Solved around 1000 different problems of various topics on different platforms.}
+  \resumeSubHeadingListEnd
 
-%
-%--------PROGRAMMING SKILLS------------
-%\section{Programming Skills}
-%  \resumeSubHeadingListStart
-%    \item{
-%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
-%      \hfill
-%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
-%    }
-%  \resumeSubHeadingListEnd
-
-
-%-------------------------------------------
+%--------------Accomplishments-------------------
+\section{Accomplishments}
+  \resumeSubHeadingListStart
+    \resumeSubItemList{Co-coordinated Institute NSS Team consisting of 40 members, and organized cleanliness drive, visits to old age homes, visits to villages etc.}
+    \resumeSubItemList{Co-Coordinated Institute Counselling Services, part of the Academic Helping Team helping 100+ students in academics.}
+    \resumeSubItemList{Event co-coordinator of CryptoCracker in Abhikalpan'19, Technical Fest, IIIT Jabalpur}
+  \resumeSubHeadingListEnd
 \end{document}
